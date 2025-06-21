@@ -30,7 +30,13 @@ async function transcriptAudio (audioFilePath:any, apiKey: any) {
         const data = await response.json();
         const trasncription = data.text;
 
-        const outputFilePath :string = path.join(path.dirname(audioFile), `${path.basename(audioFilePath, path.extname(audioFilePath))}_transcription.txt`)
+        const outputFilePath :string = path.join(
+            path.dirname(audioFilePath), 
+            `${path.basename(
+                audioFilePath, 
+                path.extname(audioFilePath)
+            )}_transcription.txt`
+        )
 
         fs.writeFileSync(outputFilePath, trasncription);
         console.log('Transcripcion guardada en ', outputFilePath);
@@ -39,7 +45,7 @@ async function transcriptAudio (audioFilePath:any, apiKey: any) {
         console.log('Error durante la transcripcion', error)
     }
 }
-const audioPath = '../assets/audio.mp3'
+const audioPath = path.join(__dirname, '../assets/audio.mp3');
 const openaiApiKey = '../.env/cc';
 
 transcriptAudio(audioPath, openaiApiKey)
