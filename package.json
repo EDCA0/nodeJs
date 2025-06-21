@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodejs examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EDCA0/nodeJs.git"
+  },
+  "author": "EDCA0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EDCA0/nodeJs/issues"
+  },
+  "homepage": "https://github.com/EDCA0/nodeJs#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "is-odd": "^3.0.1"
+  }
+}
